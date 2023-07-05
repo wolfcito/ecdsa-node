@@ -9,4 +9,9 @@ export default defineConfig({
       overlay: false,
     },
   },
+  resolve: {
+    alias: {
+      '~/': './',
+    },
+  },
 })
