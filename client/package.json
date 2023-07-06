@@ -10,6 +10,8 @@
     "clear-cache": "npm cache clean --force"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "axios": "^0.27.2",
     "ethereum-cryptography": "^2.0.0",
     "nanoid": "^4.0.2",
