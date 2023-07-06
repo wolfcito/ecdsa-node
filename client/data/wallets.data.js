@@ -27,3 +27,33 @@ export const ACCOUNT_KEYS = new Map([
     },
   ],
 ])
+
+export const WALLET_REGISTERED = [
+  {
+    href: '#',
+    imageUrl: 'https://api.multiavatar.com/hiroshi.png',
+    status: 'online',
+    public:
+      '02f2abb44e4007d3c4bee785c6bcd5734632e0f2ee867d6e22b84e00a3fa49eb75',
+    name: 'Hiroshi',
+    handle: 'hiroshi',
+  },
+  {
+    href: '#',
+    imageUrl: 'https://api.multiavatar.com/meiling.png',
+    status: 'offline',
+    public:
+      '03ebf37e0adb62505ceb4bc9e38a16367392db2df28bf4aa98d84864ce835bf07d',
+    name: 'Mei-Ling',
+    handle: 'meiling',
+  },
+  {
+    href: '#',
+    imageUrl: 'https://api.multiavatar.com/rajesh.png',
+    status: 'online',
+    public:
+      '03d42c89f68e90a859b008163411de1c8a87dbd656e75ddd4743f049ab0b88dbe3',
+    name: 'Rajesh',
+    handle: 'rajesh',
+  },
+]
