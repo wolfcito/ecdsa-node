@@ -9,7 +9,7 @@ const app = express()
 
 const hashMessage = (message) => keccak256(Uint8Array.from(message))
 
-const port = 3042
+const port = process.env.PORT || 3042
 
 app.use(cors())
 app.use(express.json())
