@@ -23,9 +23,7 @@ app.get('/balance/:address', (req, res) => {
 
 app.post('/send', (req, res) => {
   const { signature, message } = req.body
-  const sender = publicKey
-  const recipient = message.recipient
-  const amount = message.amount
+  const { recipient, amount } = message
 
   const messageHash = hashMessage(message)
   const recoveryBit = hexToBytes(signature)[0]
@@ -35,6 +33,7 @@ app.post('/send', (req, res) => {
   signatureSigned.recovery = recoveryBit
 
   const publicKey = signatureSigned.recoverPublicKey(messageHash).toHex()
+  const sender = publicKey
   const isSigned = secp256k1.verify(signatureSigned, messageHash, publicKey)
 
   if (!isSigned) return res.status(400).send({ message: 'Invalid signature' })
